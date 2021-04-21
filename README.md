@@ -19,4 +19,4 @@ Se utiliza desde la consola a traves de dos argumentos, la ruta del fichero y la
 
 `java -jar target\bigFilesOpps.jar /tmp/datos/datos.txt rebeca`
 
-Cada ejecución generara un fichero 'output' con las líneas que tienen la cadena a buscar
+Cada ejecución generará un fichero 'output' con las líneas que tienen la cadena a buscar.
