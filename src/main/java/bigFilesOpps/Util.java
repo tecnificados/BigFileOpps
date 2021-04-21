@@ -43,7 +43,7 @@ public class Util {
 		        	logger.info("\tline: "+String.format(Constant.FORMATO_NUMERO,lineReaded));
 		        }
 		    }
-		    logger.info("\tFichero leido: "+String.format(Constant.FORMATO_NUMERO,lineReaded)+ "lineas");
+		    logger.info("\tFichero leido: "+String.format(Constant.FORMATO_NUMERO,lineReaded)+ " lineas");
 		}
 		catch (Exception e)
 		{
