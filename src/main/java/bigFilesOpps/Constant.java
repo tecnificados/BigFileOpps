@@ -9,6 +9,6 @@ package bigFilesOpps;
  */
 public class Constant {
 	
-	public static final String FORMATO_NUMERO = "%,d\n";
+	public static final String FORMATO_NUMERO = "%,d";
 
 }

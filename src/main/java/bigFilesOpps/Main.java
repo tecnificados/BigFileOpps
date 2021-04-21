@@ -19,23 +19,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		logger.info("Inicio");
-
+		logger.info("Inicio");		
 		
-		
-		if (args.length==1)
+		if (args.length==2)
 		{
+			String stringToSearch=args[1];
 			File fileToProcess=new File(args[0]);
 			if (fileToProcess.exists())
 			{
-				Util.readFile(fileToProcess.getAbsolutePath());
+				Util.readFile(fileToProcess.getAbsolutePath(), stringToSearch);
 			}else {
 				logger.info("Fichero no encontrado");
 			}
 		}else {
-			logger.error("Me tienes que pasar la ruta del fichero como argumento.");
-			logger.error("\t c:\\datos\\bigFile.csv");
-			logger.error("\t /tmp/datos/bigFile.csv");
+			logger.error("Me tienes que pasar la ruta del fichero y la cadena a buscar como argumentos.");
+			logger.error("\t c:\\datos\\bigFile.csv tuemail@loquesea.com");
+			logger.error("\t /tmp/datos/bigFile.csv guybrush");
 		}
 			
 

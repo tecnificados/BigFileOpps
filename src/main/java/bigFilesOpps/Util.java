@@ -3,9 +3,12 @@
  */
 package bigFilesOpps;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.util.Date;
 import java.util.Scanner;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,14 +18,11 @@ import org.apache.logging.log4j.Logger;
  */
 public class Util {
 	
-	/**
-	 * 
-	 */
-
 	private static final Logger logger = LogManager.getLogger(Util.class);
 	
-	public static void readFile(String path)
+	public static void readFile(String path, String search)		
 	{
+		File outputFile=new File("output"+new Date().hashCode()+".csv");
 		int lineReaded=0;
 		FileInputStream inputStream = null;
 		Scanner sc = null;
@@ -33,6 +33,10 @@ public class Util {
 		    
 		    while (sc.hasNextLine()) {
 		        String line = sc.nextLine();	
+		        if (line.contains(search))
+		        {
+		        	FileUtils.writeStringToFile(outputFile, line+System.getProperty("line.separator"), "utf-8",true);
+		        }
 		        lineReaded++;
 		        if (lineReaded%100000==0)
 		        {
