@@ -33,7 +33,7 @@ public class Util {
 		    
 		    while (sc.hasNextLine()) {
 		        String line = sc.nextLine();	
-		        if (line.contains(search))
+		        if (line.toLowerCase().contains(search.toLowerCase()))
 		        {
 		        	FileUtils.writeStringToFile(outputFile, line+System.getProperty("line.separator"), "utf-8",true);
 		        }
